@@ -1,0 +1,114 @@
+╔════════════════════════════════════════════════════════════════╗
+║     🎵 QUICK START - MUSIC PLAYER SETUP 🎵                     ║
+╚════════════════════════════════════════════════════════════════╝
+
+📋 STEP-BY-STEP SETUP:
+
+1️⃣ EDIT THE PLAYLIST
+   Open: js/audio-system.js
+   
+   Find the 'playlist' section (around line 15)
+   and add your music like this:
+   
+   {
+     id:     "song1",
+     title:  "Your Song Title",
+     artist: "Your Artist",
+     file:   "music/your-file.mp3",
+     cover:  "assets/music-cover/your-file.jpg",
+     startTime: 0,
+     endTime: null,
+     loopStart: null,
+     volume: 0.75,
+     loop: true,
+     fadeIn: 2.5,
+     fadeOut: 2.0
+   }
+
+2️⃣ ADD YOUR MUSIC FILES
+   Put your music files (.mp3, .wav, etc.) in:
+   
+   → music/
+   
+   Example filenames:
+   - music/my-love-song.mp3
+   - music/beautiful-day.mp3
+   - music/romantic-night.mp3
+
+3️⃣ (OPTIONAL) ADD COVER IMAGES
+   Put album art in:
+   
+   → assets/music-cover/
+   
+   Make sure filenames match:
+   - music/my-love-song.mp3 
+   - assets/music-cover/my-love-song.jpg
+
+4️⃣ OPEN YOUR SITE
+   Simply double-click index.html or open in browser:
+   
+   file:///path/to/index.html
+
+   That's it! No server needed!
+
+════════════════════════════════════════════════════════════════
+
+✨ FEATURES:
+
+✓ Works completely offline
+✓ No server required
+✓ No dependencies to install
+✓ Edit playlist directly in code
+✓ Simple folder structure
+
+════════════════════════════════════════════════════════════════
+
+💡 EDITING THE PLAYLIST:
+
+Open js/audio-system.js and look for the 'playlist' section.
+
+Add/remove/edit entries like this:
+
+const playlist = [
+  {
+    id:        "song1",          // unique ID
+    title:     "Song Name",      // displayed title
+    artist:    "Artist Name",    // displayed artist
+    file:      "music/song.mp3", // path to audio file
+    cover:     "assets/music-cover/song.jpg", // cover image
+    startTime: 0,    // start at 0 seconds
+    endTime:   null, // play full song (null = full)
+    loopStart: null, // loop from start
+    volume:    0.75, // volume 0-1
+    loop:      true, // loop when done
+    fadeIn:    2.5,  // fade in duration
+    fadeOut:   2.0   // fade out duration
+  },
+  // Add more songs here...
+];
+
+════════════════════════════════════════════════════════════════
+
+📁 FOLDER STRUCTURE:
+
+project/
+├── music/                    ← Put your .mp3 files here
+│   ├── song1.mp3
+│   └── song2.mp3
+│
+├── assets/
+│   └── music-cover/         ← Put album covers here
+│       ├── song1.jpg
+│       └── song2.jpg
+│
+├── js/
+│   └── audio-system.js      ← Edit playlist here
+│
+├── index.html               ← Main file (just open this!)
+└── ...
+
+════════════════════════════════════════════════════════════════
+
+🎉 ENJOY YOUR MUSIC PLAYER! 🎵
+
+For more details, see: MUSIC_SETUP.md
